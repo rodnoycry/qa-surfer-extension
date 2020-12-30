@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+		<script type="text/javascript">
+		$( init );
+			function init() {// Удаляем содержимое #myDiv1 и #myDiv2
+				$('.emptyMe').empty();
+			}
+		</script>
+	</head>
+	<body>
+		<div class="emptyMe" id="myDiv1">
+			<p>Параграф с текстом</p>
+		</div>
+		<div class="emptyMe" id="myDiv2">
+			<p>Другой параграф с текстом</p>
+			Текстовый узел, как он есть
+		</div>
+	</body>
+</html>

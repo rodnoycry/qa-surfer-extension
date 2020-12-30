@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>QA SURFER</title>
+	<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<style type="text/css"> 
+		button {
+			outline:none;
+		}
+		input {
+			outline:none;
+		}
+		body {
+			background: url(images/background.jpg)
+		}
+	</style>
+</head>
+<body>
+	<img src="images/logo.png" class="logo">
+	<p class="check" id="text_check_bold">
+		Проверка страницы
+	</p>
+	<p class="check" id="text_check">
+		Ссылки: <span id="links_count">0</span>
+	</p>
+	<button class="check" id="check_button">
+		Начать
+	</button>
+	<img src="images/amojito.png" class="check" id="amojito_check">
+	<script type="text/javascript">
+		var currentNumber = $('#links_count').text();
+		$('.check').animate({opacity: 1});
+		$({numberValue: currentNumber}).animate({numberValue: 100}, {
+			duration: 1500,
+			easing: 'linear',
+			step: function() { 
+				$('#links_count').text(Math.ceil(this.numberValue)); 
+			}
+		});		
+	</script>
+</body>
+</html>
+
+
+<script type="text/javascript">var currentNumber = $('#links_count').text();$('.check').animate({opacity: 1});$({numberValue: currentNumber}).animate({numberValue: 100}, {duration: 1500,easing: 'linear',step: function() { $('#links_count').text(Math.ceil(this.numberValue)); }});</script>
+
+
